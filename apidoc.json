@@ -1,0 +1,11 @@
+{
+  "name": "KartA",
+  "version": "0.1.0",
+  "description": "API-Dokumentation",
+  "title": "Karteikarten App",
+  "url" : "http://karta.dima23.de/api/index.php",
+  "order": [
+  "User",
+  "Cardset"
+]
+}

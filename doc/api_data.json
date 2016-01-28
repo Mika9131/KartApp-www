@@ -1,0 +1,710 @@
+[
+  {
+    "type": "delete",
+    "url": "/card/:cardid",
+    "title": "Karte löschen",
+    "name": "deleteCard",
+    "group": "Card",
+    "description": "<p>DBHandler Funktion: <code>deleteCard($cardid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  x\n  message: 'x'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: x\n  message: 'x'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X DELETE \" http://karta.dima23.de/api/index.php/card/132",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Card"
+  },
+  {
+    "type": "get",
+    "url": "/card",
+    "title": "Alle Karten ausgeben",
+    "name": "getAllCards",
+    "group": "Card",
+    "description": "<p>DBHandler Funktion: <code>getAllCards($cardsetid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "cardsetid",
+            "description": "<p>KartensatzID</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  cards: [{\"cardid\":18,\"type\":0,\"question\":\"Frage1\",\"answer\":\"Antwort1\"},{\"cardid\":19,\"type\":0,\"question\":\"Frage2\",\"answer\":\"Ant2\"}]\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Kartensatz konnte nicht gefunden werden.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET -d \"cardsetid=12\" http://karta.dima23.de/api/index.php/card",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Card"
+  },
+  {
+    "type": "get",
+    "url": "/card/:cardid",
+    "title": "Karte ausgeben",
+    "name": "getCard",
+    "group": "Card",
+    "description": "<p>DBHandler Funktion: <code>getCard($cardid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  \"type\":0,\"question\":\"Frage2\",\"answer\":\"Antwort2\",\"cardsetid\":33\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Karte wurde nicht gefunden!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET http://karta.dima23.de/api/index.php/card/132",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Card"
+  },
+  {
+    "type": "get",
+    "url": "/cardset",
+    "title": "Alle Kartensätze ausgeben",
+    "name": "getAllCardset",
+    "group": "Cardset",
+    "description": "<p>DBHandler Funktion: <code>getAllCardsets($userid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  cardsets: [{\"setid\":1,\"name\":\"OOP\"},{\"setid\":2,\"name\":\"KLR\"},{\"setid\":33,\"name\":\"DB\"}]\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Benutzer wurde nicht gefunden!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET http://karta.dima23.de/api/index.php/cardset",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Cardset"
+  },
+  {
+    "type": "get",
+    "url": "/cardset/:cardsetid",
+    "title": "Kartensatz ausgeben",
+    "name": "getCardset",
+    "group": "Cardset",
+    "description": "<p>DBHandler Funktion: <code>getCardset($cardsetid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  cardsetname: 'Englisch 1'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Kartensatz wurde nicht gefunden!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET http://karta.dima23.de/api/index.php/cardset/12",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Cardset"
+  },
+  {
+    "type": "get",
+    "url": "/friend",
+    "title": "Freunde zurückgeben",
+    "name": "getFriends",
+    "group": "Friends",
+    "description": "<p>DBHandler Funktion: <code>getFriends($userid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "known",
+            "description": "<p>gewusst Ja/Nein</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  friends: [{\"userid\":1,\"username\":\"freund1\"},{\"userid\":2,\"username\":\"freund2\"}]\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Benutzer konnte nicht gefunden werden.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET http://karta.dima23.de/api/index.php/friend",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Friends"
+  },
+  {
+    "type": "get",
+    "url": "/permission",
+    "title": "Berechtigungen zurückgeben",
+    "name": "getPermission",
+    "group": "Share",
+    "description": "<p>DBHandler Funktion: <code>assignedUser($cardsetid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "cardsetid",
+            "description": "<p>Kartensatz ID</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  permission: [{\"userid\":1,\"username\":\"freund1\", \"persmission\":\"1\"},{\"userid\":2,\"username\":\"freund2\",\"persmission\":\"0\"}]\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Kartensatz konnte nicht gefunden werden.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET -d \"cardsetid=1\" http://karta.dima23.de/api/index.php/permission",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Share"
+  },
+  {
+    "type": "get",
+    "url": "/stats/:cardsetid",
+    "title": "Statistik für Kartensatz zurückgeben",
+    "name": "getStats",
+    "group": "Stats",
+    "description": "<p>DBHandler Funktion: <code>getStats($userid, $cardsetid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  stats: 0.75 (Noch zu Lernender Prozentsatz)\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Kartensatz konnte nicht gefunden werden.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X GET http://karta.dima23.de/api/index.php/stats/12",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Stats"
+  },
+  {
+    "type": "post",
+    "url": "/stats/:cardid",
+    "title": "Statistik für Karte erstellen",
+    "name": "setStats",
+    "group": "Stats",
+    "description": "<p>DBHandler Funktion: <code>setStats($userid, $cardid, $known)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "known",
+            "description": "<p>gewusst Ja/Nein</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  message: 'Statistik gesetzt.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Statistik konnte nicht gesetzt werden.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl  -H \"Authorization: ce0783ccae32b2eddf9d49a6c8592dfb\" -X POST -d \"known=1\" http://karta.dima23.de/api/index.php/stats/12",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "Stats"
+  },
+  {
+    "type": "get",
+    "url": "/user",
+    "title": "Benutzerdaten ausgeben",
+    "name": "getUser",
+    "group": "User",
+    "description": "<p>DBHandler Funktion: <code>getUserById($userid)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  username: 'Max'\n  email:  'max@gmx.de'\n  apikey: 'kjhasdlkjh98zaoszdpa98sadölkj'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Benutzer wurde nicht gefunden!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl -H 'Authorization: kjhasdkj23hkj2h3kj2h3' -X GET http://karta.dima23.de/api/index.php/user",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "User"
+  },
+  {
+    "type": "post",
+    "url": "/login",
+    "title": "Benutzer Login prüfen",
+    "name": "login",
+    "group": "User",
+    "description": "<p>DBHandler Funktion: <code>checkLogin($username, $password)</code> - <code>getUser($username)</code></p> ",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>Benutzername</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Passwort</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  username: 'Max'\n  email:  'max@gmx.de'\n  apikey: 'kjhasdlkjh98zaoszdpa98sadölkj'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Login fehlgeschlagen. Zugangsdaten sind nicht korrekt!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl -X POST -d \"username=max\" -d \"password=pass\" http://karta.dima23.de/api/index.php/login",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "User"
+  },
+  {
+    "type": "post",
+    "url": "/register",
+    "title": "Benutzer registrieren",
+    "description": "<p>DBHandler Funktion: <code>createUser($name, $email, $password)</code></p> ",
+    "name": "register",
+    "group": "User",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "name",
+            "description": "<p>Benutzername</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>Email Adresse</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Passwort</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  message: 'Du hast dich erfolgreich registriert!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Ein Fehler ist aufgetreten! Bitte versuche es zu einem späteren Zeitpunkt erneut!'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl -X POST -d \"username=max\" -d \"password=pass\" -d \"email=mein@mail.de\" http://karta.dima23.de/api/index.php/register",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "User"
+  },
+  {
+    "type": "put",
+    "url": "/user",
+    "title": "Benutzerdaten ändern",
+    "name": "updateUser",
+    "group": "User",
+    "description": "<p>DBHandler Funktion: <code>updateUser($email, $password)</code></p> ",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "Authorization",
+            "description": "<p>API-Key des Benutzers</p> "
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "mail",
+            "description": "<p>Email Adresse</p> "
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "password",
+            "description": "<p>Passwort</p> "
+          }
+        ]
+      }
+    },
+    "success": {
+      "examples": [
+        {
+          "title": "Erfolg (Beispiel):",
+          "content": "{\n  error:  false\n  message: 'Benutzerdaten wurden geändert.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "Error (Beispiel):",
+          "content": "{\n  error: true\n  message: 'Fehler! Benutzerdaten konnten nicht geändert werden.'\n}",
+          "type": "json"
+        },
+        {
+          "title": "CURL Beispiel:",
+          "content": "curl -H 'Authorization: kjhasdkj23hkj2h3kj2h3' -X PUT -d \"email=neue@mail.de\" -d \"password=ganzgeheim\" http://karta.dima23.de/api/index.php/user",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./api/index.php",
+    "groupTitle": "User"
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p> "
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./doc/main.js",
+    "group": "_Users_dvogt_Dev_karta_www_doc_main_js",
+    "groupTitle": "_Users_dvogt_Dev_karta_www_doc_main_js",
+    "name": ""
+  },
+  {
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "optional": false,
+            "field": "varname1",
+            "description": "<p>No type.</p> "
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "varname2",
+            "description": "<p>With type.</p> "
+          }
+        ]
+      }
+    },
+    "type": "",
+    "url": "",
+    "version": "0.0.0",
+    "filename": "./node_modules/apidoc/template/main.js",
+    "group": "_Users_dvogt_Dev_karta_www_node_modules_apidoc_template_main_js",
+    "groupTitle": "_Users_dvogt_Dev_karta_www_node_modules_apidoc_template_main_js",
+    "name": ""
+  }
+]

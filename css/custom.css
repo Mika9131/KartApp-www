@@ -1,0 +1,225 @@
+/*.card {
+  padding: 30px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+  background-color: #ccc;
+  height: 500px;
+  width: 100%;
+  position:relative;
+  overflow: auto;
+}
+*/
+
+.progress {background: rgba(245, 245, 245, 1); border: 0px solid rgba(245, 245, 245, 1); border-radius: 4px; height: 30px;}
+.progress-bar-custom {background: rgba(66, 139, 202, 1);}
+
+.card {
+  margin-bottom: 30px;
+  height: 500px;
+  width: 100%;
+  /*position:relative;*/
+}
+
+.front, .back {
+  border-radius: 6px;
+  max-width: 100%;
+}
+
+
+.front, .back .h1 {
+  color: inherit;
+}
+.front, .back {
+  margin-bottom: 15px;
+  font-size: 21px;
+  font-weight: 200;
+  overflow: auto;
+}
+.front, .back > hr {
+  border-top-color: #d5d5d5;
+}
+.front, .back {
+  background-color: #eee;
+}
+
+a.nav{
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+a.nav:hover,
+a.nav:focus {
+   color: #fff;
+   text-decoration: none;
+   background-color: #337ab7;
+   outline: 0;
+ }
+
+ a.sets{
+   display: block;
+   font-size: 18px;
+   padding: 3px 20px;
+   clear: both;
+   color: #333;
+ }
+ a.sets:hover,
+ a.sets:focus {
+    color: #ccc;
+    text-decoration: none;
+    outline: 0;
+  }
+
+  a.password{
+    color: #000;
+  }
+  a.password:hover,
+  a.password:focus {
+     color: #ccc;
+   }
+
+.navbar .brand {
+   max-height: 50px;
+   overflow: visible;
+   padding-top: 5px;
+   padding-bottom: 0;
+}
+
+.navbar a.navbar-brand {padding: 5px 15px 0px;}
+
+
+.row > .span3 {
+    display: inline-block !important;
+    border: solid 1px red;
+    vertical-align: middle;
+    height: 10px;
+}
+
+td.bar {
+  padding-top: 18px;
+}
+
+td.bar2 {
+  padding-top: -2px;
+}
+
+/** === iPHONE === **/
+
+.iphone-body {
+	position: relative;
+	background: #fff;
+	height: 600px;
+	width: 300px;
+	/*margin: 100px auto 100px auto;*/
+	border-radius: 40px;
+	box-shadow: 0 6px 0px 0 #9999cc;
+}
+
+.iphone-body:before {
+	content: "";
+	display: block;
+	position: relative;
+	top: 36px;
+	background: #e7ebec;
+	height: 6px;
+	width: 60px;
+	border-radius: 6px;
+	margin: 0 auto;
+}
+
+.iphone-body:after {
+	content: "";
+	display: block;
+	position: relative;
+	top: 86px;
+	background: none;
+	height: 34px;
+	width: 34px;
+	border: 6px solid #e7ebec;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.camera-1 {
+	position: absolute;
+	background: #e7ebec;
+	height: 8px;
+	width: 8px;
+	border-radius: 8px;
+	margin: 12px 0 0 146px;
+}
+
+.camera-2 {
+	position: absolute;
+	background: #e7ebec;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	margin: 28px 0 0 90px;
+}
+
+.iphone-screen {
+	position: relative;
+	top: 70px;
+	background: #fff/*#f5f7f8*/;
+	height: 440px;
+	width: 272px;
+	margin: 0 auto;
+	border: 4px solid #e7ebec;
+	border-radius: 4px;
+}
+
+.banner1 {
+	position: relative;
+  background-image: url("../images/ios_screen.png");
+  background-size: 100% 440px;
+  background-repeat: no-repeat;
+	height: 440px;
+	width: 100%;
+	margin: 0;
+}
+
+/*Android Device*/
+.device-fill-color {
+  background-color: #ffffff;
+}
+
+.device-border {
+  border: 2px solid #CACACA;
+}
+
+.phone {
+  width: 280px;
+  height: 555px;
+  margin: 20px auto;
+  border-radius: 37px;
+  -webkit-box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.15);
+  box-shadow: 0px 10px 10px 5px rgba(0,0,0,0.15);
+ }
+  .screen {
+    width: 90%;
+    height: 82%;
+    margin-top: 16%;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: 9% auto; */
+    .device-border;
+    .border-box;
+    background-color: #cacaca;
+    border-radius: 6px;
+  }
+
+  .button-android {
+    width: 10%;
+    padding: 4%;
+    .device-border;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #cacaca;
+    margin-top: 4%;
+    margin-left: auto;
+    margin-right: auto;
+  }
