@@ -6,6 +6,10 @@ A simple flashcard app.
 
 ![KartApp-Screenshot](https://github.com/dvogt23/KartApp-iOS/blob/master/Files/KartaScreen.png)
 
+### Benutzerhandbuch Webseite/App [User Manual](https://github.com/dvogt23/KartApp-iOS/raw/master/Files/Benutzerhandbuch%20KartApp.pdf)
+
+A Project by O. Schrand, [T. Sundermann](https://github.com/Sodamann), T. Pretzel, [D. Vogt](https://github.com/dvogt23), M. Yaray
+
 ## Features
 - [x] Login
 - [x] Registrieren
