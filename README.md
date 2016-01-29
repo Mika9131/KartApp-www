@@ -38,3 +38,9 @@ v1.0:
  - [ ] accept function in freindlist/cardsets
  - [ ] optimize permission of shared cardsets
  - [ ] limit cardsets/cards
+
+## Libraries
+
+ * [Slim API](http://www.slimframework.com)
+ * [apidoc.js](http://apidocjs.com) 
+ * [ckeditor](http://ckeditor.com)
